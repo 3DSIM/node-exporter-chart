@@ -1,0 +1,10 @@
+apiVersion: v1
+description: A Helm chart for installing a node exporter on Kubernetes.  Should be used in conjuction with prometheus-operator.
+  Credit goes to CoreOS team for developing this and other exporters.
+name: node-exporter
+version: 0.1.0
+maintainers:
+  - name: 3DSIM
+    email: webteam@3dsim.com
+sources:
+  - https://github.com/3dsim/node-exporter-chart
