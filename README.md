@@ -1,6 +1,8 @@
 # node-exporter-chart
 Helm chart to deploy a node exporter service which can be used for scraping Prometheus metrics from each node in a kubernetes cluster.
 
+This is basically a fork of the CoreOS team's `exporter-node` chart.  See https://github.com/coreos/prometheus-operator/tree/master/helm/kube-prometheus/charts/exporter-node.
+
 # Helm
 We are using Helm along with Quay.io to host our Helm charts.  See https://github.com/app-registry/appr-helm-plugin and https://coreos.com/blog/quay-application-registry-for-kubernetes.html.
 
@@ -38,4 +40,7 @@ Alternatively, a YAML file that specifies the values for the parameters can be p
 ```console
 helm registry install quay.io/3dsim/node-exporter --name=my-release -f values.yaml
 ```
+
+# Developers
+Modify the chart and be sure to bump the version in [Chart.yaml](Chart.yaml).  After that, follow these directions to push the changes to Quay.io: https://github.com/app-registry/appr-helm-plugin#create-and-push-your-own-chart
 
